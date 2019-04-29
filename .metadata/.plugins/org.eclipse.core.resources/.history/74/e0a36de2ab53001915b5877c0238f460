@@ -1,0 +1,122 @@
+/**
+ * 
+ */
+package com.cryptography;
+
+/**
+ * @author Mukes
+ *
+ */
+
+import java.util.Scanner;
+
+
+public class Encryption {
+		
+	
+	void shiftCipher() {
+		
+		Scanner s = new Scanner(System.in);
+		
+		System.out.println("Please Enter the Shift value :");
+		int shift = s.nextInt();
+		
+		System.out.println("Please enter a plain Text to Encrypt text using ShiftCipher :\n");
+		String key=s.next();
+		
+		System.out.println("The Encrypted message is :");
+		char[] stringToCharArray = key.toCharArray();
+		 
+		
+		for (char value : stringToCharArray) {
+			int asci = (value);
+			if (asci > 64 && asci < 91) {
+				
+				int val = asci - 65 + shift;
+				int val1 = val % 25;
+				int result = val + 65;
+				String message= Character.toString((char)result);			
+				System.out.println(message);	
+			}
+			else if(asci > 96 && asci < 123) {
+				
+				int val = asci - 97 + shift;
+				int val1 = val % 25;
+				int result = val + 97;
+				String message = Character.toString((char)result);			
+				System.out.println(message);		
+			}
+		}	
+}
+	
+	void playFairCipher() {
+		Scanner s = new Scanner(System.in);
+		String keyword;
+		keyword = s.nextLine();
+		char a = keyword.charAt(1);
+		String matrix[][];
+		for(int i=0; i<keyword.length();i++) {
+			for(int j = 0; i < 5; i++) {
+				matrix[i][j]= a;
+			}
+			
+			
+		}
+	}
+	
+	void hillCipher() {
+		
+	}
+	
+	void vigenereCipher() {
+		
+	}
+	
+	void vernamCipher() {
+		
+	}
+	
+	void relativePrimeNumberChecker() {
+		
+	}
+		
+		
+
+/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		Encryption obj=new Encryption();
+		Scanner cho = new Scanner(System.in);
+		
+//		obj.shiftCipher(); Working verified
+		
+		obj.playFairCipher();
+		
+//		System.out.println("Enter 2 for Shift Encryption\nEnter 3 for PlayFairChiper");
+//		int choice=cho.nextInt();
+//		
+//		switch(choice) {
+//		
+//		case 2:
+//			obj.shiftCipher();
+//			break;
+//		case 3:
+//			obj.playFairCipher();
+//			break;
+//			default:
+//				System.out.println("Please Enter your anyone of the choice otherwise terminate the Program!!");
+//			
+//		}
+		
+		
+		
+		
+
+	}
+
+
+}

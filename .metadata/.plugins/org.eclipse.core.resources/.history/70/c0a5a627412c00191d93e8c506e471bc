@@ -1,0 +1,28 @@
+/**
+ * 
+ */
+package mukesh.java;
+
+import javax.swing.JFrame;
+/**
+ * @author Mukes
+ *
+ */
+public class Practice {
+
+	
+	public Practice() {
+		// TODO Auto-generated constructor stub
+		System.out.println("This is the default contructor the class practice");
+	}
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Practice object=new Practice();
+
+	}
+
+}

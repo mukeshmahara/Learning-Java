@@ -1,0 +1,36 @@
+/**
+ * 
+ */
+package learning.JAVA.basic;
+
+
+/**
+ * @author Anonymous
+ *
+ */
+class Variables {
+
+	/**
+	 * 
+	 */
+	public Variables() {
+		// TODO Auto-generated constructor stub
+	}
+	void gcd(int a,int b) {
+		if(b==0) {
+			System.out.println("The GCD of the give number is: "+b);
+		}
+		
+	}
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	
+
+
+}

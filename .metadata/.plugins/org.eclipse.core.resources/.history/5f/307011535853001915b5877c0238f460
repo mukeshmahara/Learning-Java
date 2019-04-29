@@ -1,0 +1,99 @@
+/**
+ * 
+ */
+package com.cryptography;
+
+/**
+ * @author Mukes
+ *
+ */
+
+import java.util.Scanner;
+
+
+public class Encryption {
+		
+	
+	void shiftCipher() {
+		
+		Scanner s = new Scanner(System.in);
+		
+		System.out.println("Please Enter the Shift value :");
+		int shift = s.nextInt();
+		
+		System.out.println("Please enter a plain Text to Encrypt text using ShiftCipher :");
+		String[] text = new String[100];
+//		text[12]="mukesh";
+
+		System.out.println(s.nextLine());
+		
+		for(int i=0;i<text.length;i++) {
+
+			System.out.println(text[i]);
+			text[i]=s.nextLine();
+		}
+		
+		
+	}
+	
+	
+	
+	
+	void playFairCipher() {
+		
+	}
+	
+	void hillCipher() {
+		
+	}
+	
+	void vigenereCipher() {
+		
+	}
+	
+	void vernamCipher() {
+		
+	}
+	
+	void relativePrimeNumberChecker() {
+		
+	}
+		
+		
+
+/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		Encryption obj=new Encryption();
+		Scanner cho = new Scanner(System.in);
+		
+		obj.shiftCipher();
+		
+		System.out.println("Enter 2 for Shift Encryption\nEnter 3 for PlayFairChiper");
+		int choice=cho.nextInt();
+		
+		switch(choice) {
+		
+		case 2:
+			obj.shiftCipher();
+			break;
+		case 3:
+			obj.playFairCipher();
+			break;
+			default:
+				System.out.println("Please Enter your anyone of the choice otherwise terminate the Program!!");
+			
+		}
+		
+		
+		
+		
+
+	}
+
+
+}
