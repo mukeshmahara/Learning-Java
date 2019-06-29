@@ -125,7 +125,9 @@ public static void main(String[] arg){
     Encryption obj=new Encryption();
     Scanner cho = new Scanner(System.in);
 		
-//		obj.shiftCipher(); Working verified
-    obj.playFairCipher();
+		obj.shiftCipher();
+                
+//                Working verified
+//    obj.playFairCipher();
 }
 }

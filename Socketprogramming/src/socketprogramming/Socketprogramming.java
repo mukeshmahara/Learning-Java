@@ -1,11 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+package socketprogramming;
+
 import java.net.*; 
 import java.io.*; 
-package socketprogramming;
 
 /**
  *
@@ -31,6 +27,6 @@ public class Socketprogramming
   
     public static void main(String args[]) 
     { 
-        Socketprogramming client = new Socketprogramming("127.0.0.1", 5000); 
+//        Socketprogramming client = new Socketprogramming("127.0.0.1", 5000); 
     } 
 } 
