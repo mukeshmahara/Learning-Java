@@ -1,0 +1,6 @@
+Time		Speed
+1.0hr		45.0miles
+2.0hr		90.0miles
+3.0hr		135.0miles
+4.0hr		180.0miles
+5.0hr		225.0miles

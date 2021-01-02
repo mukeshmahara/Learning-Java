@@ -42,6 +42,7 @@ public class Dashboard {
 
 		dasboardPanel.add(centerPanel, BorderLayout.CENTER);
 		centerPanel.setBackground(Color.DARK_GRAY);
+		
 
 		dasboardPanel.add(northPanel, BorderLayout.NORTH);
 		northPanel.setBackground(new Color(48, 105, 148));

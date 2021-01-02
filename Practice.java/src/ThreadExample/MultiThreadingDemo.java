@@ -1,0 +1,16 @@
+package ThreadExample;
+
+public class MultiThreadingDemo extends Thread {
+
+	public MultiThreadingDemo() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+
+	}
+
+}

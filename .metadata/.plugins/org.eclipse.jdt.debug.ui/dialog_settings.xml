@@ -1,24 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<item value="82" key="org.eclipse.jdt.debug.ui.jre_preference_page_context.columnWidth2"/>
-	<item value="1" key="org.eclipse.jdt.debug.ui.jre_preference_page_context.sortColumn"/>
-	<item value="194" key="org.eclipse.jdt.debug.ui.jre_preference_page_context.columnWidth1"/>
-	<item value="121" key="org.eclipse.jdt.debug.ui.jre_preference_page_context.columnWidth0"/>
+	<item key="org.eclipse.jdt.debug.ui.jre_preference_page_context.columnWidth2" value="80"/>
+	<item key="org.eclipse.jdt.debug.ui.jre_preference_page_context.sortColumn" value="1"/>
+	<item key="org.eclipse.jdt.debug.ui.jre_preference_page_context.columnWidth1" value="194"/>
+	<item key="org.eclipse.jdt.debug.ui.jre_preference_page_context.columnWidth0" value="121"/>
+	<item key="LAST_PATH_SETTING" value="D:\Softwares\Java"/>
 	<section name="org.eclipse.jdt.debug.ui.MAIN_METHOD_SELECTION_DIALOG">
-		<item value="true" key="ShowStatusLine"/>
-		<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;History&gt;&#x0D;&#x0A;&lt;historyRootNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=lol/src&amp;lt;lol{SerialTest.java[SerialTest&lt;/infoNode&gt;&#x0D;&#x0A;&lt;/historyRootNode&gt;&#x0D;&#x0A;&lt;/History&gt;" key="History"/>
+		<item key="ShowStatusLine" value="true"/>
+		<item key="History" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;History&gt;&#x0D;&#x0A;&lt;historyRootNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=lol/src&amp;lt;lol{SerialTest.java[SerialTest&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=Practice.java/src&amp;lt;Gautam_Rana{Circle.java[Circle&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=Practice.java/src&amp;lt;Gautam_Rana{Employee.java[Employee&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=Practice.java/src&amp;lt;Gautam_Rana{Employee.java[ProductionWorker&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=GUI/C:\/Program Files\/AdoptOpenJDK\/jdk-11.0.8.10-hotspot\/lib\/jrt-fs.jar`java.base=/javadoc_location=/https:\/\/docs.oracle.com\/en\/java\/javase\/11\/docs\/api\/=/&amp;lt;jdk.internal.org.objectweb.asm.util(ASMifier.class[ASMifier&lt;/infoNode&gt;&#x0D;&#x0A;&lt;/historyRootNode&gt;&#x0D;&#x0A;&lt;/History&gt;"/>
 		<section name="DialogBoundsSettings">
-			<item value="600" key="DIALOG_WIDTH"/>
-			<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
-			<item value="500" key="DIALOG_HEIGHT"/>
-			<item value="388" key="DIALOG_X_ORIGIN"/>
-			<item value="44" key="DIALOG_Y_ORIGIN"/>
+			<item key="DIALOG_WIDTH" value="600"/>
+			<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+			<item key="DIALOG_HEIGHT" value="500"/>
+			<item key="DIALOG_X_ORIGIN" value="388"/>
+			<item key="DIALOG_Y_ORIGIN" value="44"/>
 		</section>
 	</section>
 	<section name="org.eclipse.jdt.internal.debug.ui.ExpressionInformationControlCreator$ExpressionInformationControl">
-		<item value="200" key="SashWeightTree"/>
-		<item value="200" key="SashWeightDetails"/>
-		<item value="614" key="WIDTH"/>
-		<item value="194" key="HEIGHT"/>
+		<item key="SashWeightTree" value="200"/>
+		<item key="SashWeightDetails" value="200"/>
+		<item key="WIDTH" value="614"/>
+		<item key="HEIGHT" value="194"/>
 	</section>
 </section>

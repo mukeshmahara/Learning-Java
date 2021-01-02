@@ -1,9 +1,5 @@
-/**
- * 
- */
-package DeliveryCompany;
 
-//import DeliveryCompany.Login;
+package DeliveryCompany;
 
 /**
  * @author Dell
@@ -22,8 +18,8 @@ public class GUI extends Login {
 
 		// TODO Auto-generated method stub
 
-		GUI obj = new GUI();
-		Login l = new Login();
+		new GUI();
+		new Login();
 
 	}
 

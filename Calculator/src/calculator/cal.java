@@ -40,9 +40,16 @@ public class cal extends javax.swing.JFrame {
                 break;
         
             case 5:
-                ans=num % Double.parseDouble(jTextField1.getText());
+                ans=(num/100)*Double.parseDouble(jTextField1.getText());
                 jTextField1.setText(Double.toString(ans));
                 break;
+                
+            case 6:
+                
+                ans=(num/100)*Double.parseDouble(jTextField1.getText());
+                jTextField1.setText(Double.toString(ans));
+                break;
+            
         }       
         
     }
@@ -371,7 +378,7 @@ public class cal extends javax.swing.JFrame {
             }
         });
 
-        jButton43.setText("exp");
+        jButton43.setText("ln");
         jButton43.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton43ActionPerformed(evt);
@@ -545,7 +552,11 @@ public class cal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        jTextField1.setText(jTextField1.getText() + "%"); 
+//        jTextField1.setText(jTextField1.getText() + "%"); 
+          num= Double.parseDouble(jTextField1.getText());
+          calculation = 5;
+          jTextField1.setText("");
+          jLabel1.setText(num + "%");
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
@@ -562,6 +573,7 @@ public class cal extends javax.swing.JFrame {
 
     private void jButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton22ActionPerformed
         // TODO add your handling code here:
+        jTextField1.setText(jTextField1.getText() + "sin(");
     }//GEN-LAST:event_jButton22ActionPerformed
 
     private void jButton23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton23ActionPerformed
@@ -644,10 +656,13 @@ public class cal extends javax.swing.JFrame {
 
     private void jButton39ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton39ActionPerformed
         // TODO add your handling code here:
+            jTextField1.setText(jTextField1.getText() + "tan(");
     }//GEN-LAST:event_jButton39ActionPerformed
 
     private void jButton40ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton40ActionPerformed
-        // TODO add your handling code here:
+        // TODO add your handling code here
+        jTextField1.setText(jTextField1.getText() + "cos(");
+        
     }//GEN-LAST:event_jButton40ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -656,6 +671,7 @@ public class cal extends javax.swing.JFrame {
 
     private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
         // TODO add your handling code here:
+        jTextField1.setText("");
         disable();
     }//GEN-LAST:event_jRadioButton2ActionPerformed
 
