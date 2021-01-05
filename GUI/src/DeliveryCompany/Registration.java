@@ -14,6 +14,9 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
+import javax.swing.border.TitledBorder;
+
+import net.miginfocom.swt.MigLayout;
 
 
 public class Registration extends GUI {
@@ -28,7 +31,7 @@ public class Registration extends GUI {
 	JLabel statusJLabel = new JLabel();
 	public Registration() {
 
-		regPanel.setBorder(BorderFactory.createLineBorder(Color.black));
+		regPanel.setBorder(BorderFactory.createTitledBorder(null, "User Registration", TitledBorder.CENTER,TitledBorder.CENTER , null, Color.orange));
 
 		regPanel.setBackground(Color.cyan);
 		regFrame.setForeground(Color.red);
