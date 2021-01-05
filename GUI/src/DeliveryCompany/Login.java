@@ -2,8 +2,12 @@ package DeliveryCompany;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Component;
 import java.awt.FlowLayout;
+import java.awt.Font;
+import java.awt.Graphics;
 import java.awt.Image;
+import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.BorderFactory;
@@ -15,12 +19,15 @@ import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import javax.swing.UIManager;
+import javax.swing.border.Border;
+import javax.swing.border.TitledBorder;
 
-
+import net.miginfocom.swing.MigLayout;
 
 import java.sql.*;
 
 public class Login extends JPanel {
+
 
 	private static final long serialVersionUID = -4082135099487518646L;
 	protected JFrame frame;
@@ -50,12 +57,16 @@ public class Login extends JPanel {
 		frame.setSize(400, 450);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-		panel = new JPanel(new FlowLayout((int) TOP_ALIGNMENT, 30, 10));
+		panel = new JPanel(new MigLayout("insets 80,center"));
+		
+		
+		
+		panel.setBorder(BorderFactory.createTitledBorder(null, "User Login", TitledBorder.CENTER, TitledBorder.CENTER,null, Color.green));
 		panel.setBounds(300, 200, 200, 150);
 //		panel.setBounds(30, 300, 300, 300);
 		login_imgPanel.setBackground(Color.white);
 		frame.add(login_imgPanel, BorderLayout.NORTH);
-
+		
 		ulabel = new JLabel();
 
 		utextfield = new JTextField();
@@ -75,19 +86,16 @@ public class Login extends JPanel {
 		passwordfield.setColumns(30);
 
 		panel.setBackground(Color.darkGray);
-		panel.add(utextfield);
+		panel.add(utextfield,"cell 0 0");
 
 		plabel.setText("Password");
 		plabel.setForeground(Color.white);
 
-		panel.add(plabel);
-		panel.add(passwordfield);
+		panel.add(plabel,"cell 0 3");
+		panel.add(passwordfield,"cell 0 3");
 
-		panel.add(loginbtn);
-		panel.add(signupbtn);
-
-		panel.setBorder(BorderFactory.createLineBorder(Color.darkGray));
-		;
+		panel.add(loginbtn,"cell 0 5");
+		panel.add(signupbtn,"cell 0 5");
 
 		loginbtn.addMouseListener(new java.awt.event.MouseAdapter() {
 			 public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -162,13 +170,13 @@ public class Login extends JPanel {
 
 		if (utextfield.getText().isEmpty()) {
 System.out.println(mlabel);
-			panel.add(mlabel);
+			panel.add(mlabel,"cell 0 6");
 			mlabel.setText("Enter user name !!");
 			mlabel.setForeground(Color.red);
 
 		} else if (passwordfield.getText().isEmpty()) {
 
-			panel.add(mlabel);
+			panel.add(mlabel,"cell 0 6");
 			mlabel.setText("Please Enter Password!!");
 			mlabel.setForeground(Color.red);
 
@@ -178,7 +186,7 @@ System.out.println(mlabel);
 			
 
 		} else {
-			panel.add(mlabel);
+			panel.add(mlabel,"cell 0 6");
 			mlabel.setText("Invalid Credentials!!");
 		}
 
