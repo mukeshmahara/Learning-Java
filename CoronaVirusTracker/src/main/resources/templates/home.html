@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.tymelead.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Corona Virus Tracker</title>
+</head>
+<body>
+<div class="container">
+
+    <h1>Corona Virus Data daily basis</h1>
+    <div class="jumbotron">
+        <h1 th:text="${totalReportedCases}"></h1>
+        <p>Total cases Reported as of today</p>
+        <hr>
+        <p>
+            <span>New Cases Reported since yesterday</span>
+            <span th:text="${totalNewCases}"></span>
+        </p>
+
+    </div>
+    <table class="table table-bordered table-striped ">
+        <thead class="thead-dark">
+        <tr>
+            <th>State</th>
+            <th>Country</th>
+            <th>Total Cases reported</th>
+            <th>Cases Change in 24 hr</th>
+        </tr>
+
+        </thead>
+
+        <tr th:each="locationStat : ${locationStats}">
+            <td th:text="${locationStat.state}"></td>
+            <td th:text="${locationStat.country}"></td>
+            <td th:text="${locationStat.latestTotalCases}">0</td>
+            <td th:text="${locationStat.caseChange}">0</td>
+        </tr>
+    </table>
+
+</div>
+
+</body>
+</html>
