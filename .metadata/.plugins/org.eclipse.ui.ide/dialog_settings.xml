@@ -3,9 +3,9 @@
 	<section name="ExternalProjectImportWizard">
 	</section>
 	<section name="NewWizardAction">
-		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.jdt.ui.wizards.JavaProjectWizard"/>
+		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.springsource.ide.eclipse.commons.gettingstarted.wizard.boot.NewSpringBootWizard"/>
 		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
-			<item value="org.eclipse.jdt.ui.java"/>
+			<item value="org.springsource.ide.eclipse.boot.wizards.category"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.internal.views.markers.FiltersConfigurationDialog">
@@ -31,5 +31,17 @@
 			<item key="DIALOG_Y_ORIGIN" value="44"/>
 			<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
 		</section>
+	</section>
+	<section name="SmartImportWizard">
+		<item key="SmartImportRootWizardPage.STORE_HIDE_ALREADY_OPEN" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_CLOSE_IMPORTED" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
+		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
+		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\Dell\Desktop\hibernate-release-5.4.27.Final"/>
+			<item value="D:\My Works\Java Work\Tracker"/>
+			<item value="D:\My Works\Java Work\Collection_and_Generics"/>
+			<item value="D:\My Works\Java Work\lovecalculator"/>
+		</list>
 	</section>
 </section>

@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<item key="org.eclipse.jdt.ui.last.selected.execution.enviroment" value="JavaSE-1.8"/>
-	<item key="org.eclipse.jdt.ui.lastextjar" value="D:\Softwares\Java"/>
+	<item key="org.eclipse.jdt.ui.lastextjar" value="C:\Users\Dell\Downloads"/>
 	<item key="org.eclipse.jdt.ui.last.selected.jre.kind2" value="0"/>
 	<item key="UserLibraryLoadSaveDialog.size" value="480,510"/>
 	<section name="ProblemSeveritiesConfigurationBlock">
-		<item key="expanded2" value="false"/>
-		<item key="expanded1" value="false"/>
-		<item key="expanded4" value="false"/>
-		<item key="expanded3" value="true"/>
-		<item key="expanded6" value="false"/>
-		<item key="expanded5" value="false"/>
-		<item key="expanded8" value="false"/>
-		<item key="expanded7" value="false"/>
 		<item key="expanded0" value="false"/>
+		<item key="expanded1" value="false"/>
+		<item key="expanded2" value="false"/>
+		<item key="expanded3" value="true"/>
+		<item key="expanded4" value="false"/>
+		<item key="expanded5" value="false"/>
+		<item key="expanded6" value="false"/>
+		<item key="expanded7" value="false"/>
+		<item key="expanded8" value="false"/>
 	</section>
 	<section name="org.eclipse.jdt.internal.ui.packageview.PackageExplorerPart">
 		<item key="layout" value="2"/>
@@ -23,7 +23,7 @@
 		<item key="linkWithEditor" value="false"/>
 	</section>
 	<section name="NewClassWizardPage">
-		<item key="create_constructor" value="true"/>
+		<item key="create_constructor" value="false"/>
 		<item key="create_unimplemented" value="false"/>
 	</section>
 	<section name="OptionalMessageDialog.hide.">
@@ -56,11 +56,13 @@
 	<section name="quick_assist_proposal_size">
 	</section>
 	<section name="BuildPathsPropertyPage">
-		<item key="pageIndex" value="3"/>
+		<item key="pageIndex" value="2"/>
 	</section>
 	<section name="completion_proposal_size">
 		<item key="contextSelector.size.y" value="221"/>
 		<item key="contextSelector.size.x" value="331"/>
+		<item key="size.x" value="1095"/>
+		<item key="size.y" value="246"/>
 	</section>
 	<section name="JavaElementSearchActions">
 	</section>
@@ -123,5 +125,10 @@
 		<list key="FatJarPackageWizardPage.ANTSCRIPT_LOCATION_HISTORY">
 			<item value=".xml"/>
 		</list>
+	</section>
+	<section name="JavaBuildConfigurationBlock">
+		<item key="expanded0" value="true"/>
+		<item key="expanded1" value="true"/>
+		<item key="expanded2" value="false"/>
 	</section>
 </section>

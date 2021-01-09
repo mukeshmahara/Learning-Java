@@ -3,5 +3,6 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="lib" path="D:/Softwares/Java/mysql-connector-java-8.0.13.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-11"/>
+	<classpathentry kind="lib" path="C:/Users/Dell/Downloads/miglayout-3.5.5.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

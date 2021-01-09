@@ -9,7 +9,11 @@ package calculator;
  *
  * @author Mukes
  */
-public class cal extends javax.swing.JFrame {
+public class cal extends javax.swing.
+
+
+
+Frame {
 
     /**
      * Creates new form cal
