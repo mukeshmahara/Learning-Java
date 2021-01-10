@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www/thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>
+    You are here because you invoked the RequestMapping method</h1>
+
+<form action="bookTicket" method="post">
+    <input type="text" name="amount">
+    <input type="text" name="catagory">
+    <input type="number" name="id">
+    <input type="submit" value="send">
+
+</form>
+
+<hr>
+
+
+<p>ID :<span th:text="${id}"> </span></p>
+<p>Amount :<span th:text="${amount}"></span></p>
+<p>Category :<span th:text="${catagory}"></span></p>
+
+
+</body>
+</html>
