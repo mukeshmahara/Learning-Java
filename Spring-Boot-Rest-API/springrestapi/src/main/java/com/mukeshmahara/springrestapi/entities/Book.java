@@ -15,7 +15,7 @@ public class Book {
     private int book_id;
     private String book_name;
     private String publication;
-    @Autowired
+//    @Autowired
     @Embedded
     private Author author;
 
