@@ -4,17 +4,18 @@ import org.springframework.stereotype.Component;
 
 import javax.persistence.*;
 import java.math.BigInteger;
-
+//@Entity
 @Embeddable
 public class Author {
 
+//    @Id
     private int author_id;
     private String author_first_name;
     private String author_last_name;
     private String address;
 
     @Override
-    public String toString() {
+    public String toString( ) {
         return "Author{" +
                 "author_id=" + author_id +
                 ", author_first_name='" + author_first_name + '\'' +
