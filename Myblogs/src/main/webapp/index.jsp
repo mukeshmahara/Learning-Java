@@ -1,3 +1,4 @@
+
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html>
@@ -10,7 +11,7 @@
 
 
     <style>
-        .banner-background{
+        .banner-background {
             clip-path: polygon(0 0, 100% 13%, 100% 67%, 88% 84%, 47% 82%, 0 95%);
         }
     </style>
@@ -21,7 +22,7 @@
 
 <%--//Creating banner--%>
 
-<div class="container-fluid m-0 p-0 banner-background">
+<div class="container-fluid m-0 p-0 banner-background position-relative">
 
     <div class="jumbotron primary-background text-light ">
         <div class="container ">
@@ -33,11 +34,15 @@
                 platform, which means that Java code can run on any machine that has a Java Virtual Machine (JVM) on
                 it</p>
 
-            <a href="register_page.jsp" class="btn btn-outline-light btn-lg"><span class="fa fa-spinner fa-spin"></span>Start! It's
+            <a href="register_page.jsp" class="btn btn-outline-light btn-lg"><span class="fa fa-spinner fa-spin"></span>Start!
+                It's
                 free...
             </a>
 
-            <a href="login_page.jsp" class="btn btn-outline-light btn-lg"><span class="fa fa-user-circle "></span>login</a>
+            <a href="register_page.jsp" class="btn btn-outline-light btn-lg"><span class="fa fa-user-circle "></span>&nbsp;sign
+                up</a>
+
+
         </div>
     </div>
 
@@ -145,9 +150,10 @@
         crossorigin="anonymous"></script>
 <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
-<%@include file="footer.jsp"%>
-</body>
 
+    <%@include file="footer.jsp" %>
+
+</body>
 
 
 </html>
