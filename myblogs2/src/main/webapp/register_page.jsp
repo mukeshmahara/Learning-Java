@@ -2,7 +2,8 @@
 <%@ page import="java.sql.Connection" %>
 <%@ page import="com.mukeshmahara.myblogs2.helper.ConnectionProvider" %>
 <%@ page import="java.sql.Statement" %>
-<%@ page import="java.sql.ResultSet" %><%--
+<%@ page import="java.sql.ResultSet" %>
+<%@ page import="com.mukeshmahara.myblogs2.entities.Message" %><%--
   Created by IntelliJ IDEA.
   User: Dell
   Date: 1/23/2021
@@ -123,8 +124,23 @@
 
                 </form>
 
-            </article>
-        </div> <!-- card.// -->
+                    <%
+                        Message m = (Message)session.getAttribute("regFail");
+                        if (m!=null){%>
+
+                        <div class=<%=m.getCssClass() %> role="alert">
+                            <%=m.getContent()%>
+                        </div>
+                    <%}
+                        session.removeAttribute("regFail");
+
+                %>
+
+
+        </div>
+
+        </article>
+    </div> <!-- card.// -->
 
     </div>
 
