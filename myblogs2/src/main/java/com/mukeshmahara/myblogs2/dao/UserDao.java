@@ -35,6 +35,7 @@ public class UserDao {
             f = true;
 
 
+
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -80,15 +81,19 @@ public class UserDao {
     public boolean updateUserInfo(User user){
         boolean f = false;
 
-        String sql = "update user set email =?,address = ?, phone = ? where id = ?";
+        String sql = "update user set email =?,address = ?, phone = ?,profile_img = ?  where id = ?";
         try {
             PreparedStatement pstmt = con.prepareStatement(sql);
             pstmt.setString(1, user.getEmail());
             pstmt.setString(2,user.getAddress());
             pstmt.setString(3,user.getPhone());
-            pstmt.setInt(4,user.getId());
+            pstmt.setString(4,user.getProfile());
+            pstmt.setInt(5,user.getId());
             pstmt.executeUpdate();
+
             f=true;
+
+
         }catch (SQLException e){
             e.printStackTrace();
         }
@@ -96,5 +101,6 @@ public class UserDao {
 
 
     }
+
 
 }
