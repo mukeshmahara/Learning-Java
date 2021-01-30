@@ -3,10 +3,12 @@ package com.mukeshmahara.myblogs2.servlets;
 import com.mukeshmahara.myblogs2.dao.UserDao;
 import com.mukeshmahara.myblogs2.entities.User;
 import com.mukeshmahara.myblogs2.helper.ConnectionProvider;
+import com.mukeshmahara.myblogs2.helper.Helper;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.http.*;
+import java.io.File;
 import java.io.IOException;
 
 
@@ -19,12 +21,13 @@ public class Edit_User_Info extends HttpServlet {
 
 //Fetching all Updated users data
         Part part = req.getPart("user_image");
+
         String image_name = part.getSubmittedFileName();
 
         String email = req.getParameter("user_email");
         String phone = req.getParameter("user_phone");
         String address = req.getParameter("user_address");
-        System.out.println(image_name);
+
 
         HttpSession session = req.getSession();
 
@@ -33,16 +36,30 @@ public class Edit_User_Info extends HttpServlet {
         user.setEmail(email);
         user.setPhone(phone);
         user.setAddress(address);
-        user.setUser_image(image_name);
+
+//        String oldFile = user.getProfile();
+        user.setProfile(image_name);
 
         UserDao dao = new UserDao(ConnectionProvider.getCon());
 
         boolean status = dao.updateUserInfo(user);
+
         if (status) {
-            resp.getWriter().println("Data updated succesfully");
-        } else
+            String path = req.getRealPath("/") + "pics" + File.separator + user.getProfile();
+//            String pathOldFile = req.getRealPath("/")+"pics"+File.separator + oldFile;
+//
+//            if(!pathOldFile.equals("default.png")){
+//                Helper.deleteFile(pathOldFile);
+//            }
+
+            if (Helper.saveFile(part.getInputStream(), path)) {
+                resp.getWriter().println("Profile updated successfully");
+            }
+        } else {
             resp.getWriter().println("Error occured while updating data");
-    resp.sendRedirect("profile.jsp");
+
+        }
+        resp.sendRedirect("profile.jsp");
     }
 
 }
