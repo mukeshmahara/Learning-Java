@@ -17,6 +17,7 @@
 <head>
     <title>profile</title>
     <%@include file="components/bootstrap/bootstrap_css.jsp" %>
+
     <link rel="stylesheet" href="components/custom_css/style.css">
 
 </head>
@@ -39,7 +40,7 @@
                 <a class="nav-link" href="index.jsp">Home</a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="blogs.jsp">My Blogs</a>
+                <a class="nav-link" href="post.jsp">My Blogs</a>
             </li>
             <li class="nav-item dropdown active">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
@@ -52,9 +53,6 @@
                     <a class="dropdown-item" href="#">Museum and Park</a>
                     <a class="dropdown-item" href="#">Mountain and Snow</a>
                 </div>
-            </li>
-            <li class="nav-item active">
-                <a href="contact.jsp" class="nav-link"><span class="fa fa-address-card-o"></span>Contact</a>
             </li>
         </ul>
 
@@ -177,89 +175,117 @@
 
 <%--Emd of profile modal--%>
 
+<!-- Button trigger modal -->
 
-<main class="container">
-    <div class="jumbotron">
-        <div class="row">
-            <div class="col-md-12  d-block">
-                <!-- Button trigger modal -->
-
-                <div class="btn btn-outline-primary" data-toggle="modal"
-                     data-target="#createPostModal">Create Post
-                </div>
-                <!--Creating Post Modal -->
-                <div class="modal fade" id="createPostModal" tabindex="-1" role="dialog"
-                     aria-labelledby="createPostModalLabel"
-                     aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="createPostModalLabel">Create Post</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <form action="CreatePost" method="post" id="add-post-form" enctype="multipart/form-data">
-                                    <div class="form-group">
+<div class="btn btn-outline-primary col-lg-12 mt-2 container" data-toggle="modal"
+     data-target="#createPostModal">Create Post
+</div>
+<!--Creating Post Modal -->
+<div class="modal fade" id="createPostModal" tabindex="-1" role="dialog"
+     aria-labelledby="createPostModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="createPostModalLabel">Create Post</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="CreatePost" method="post" id="add-post-form" enctype="multipart/form-data">
+                    <div class="form-group">
 
 
-                                        <select name="cid" id="" class="form-control">
-                                            <option value="" selected disabled>---Selelct Category---</option>
-                                            <%
-                                                PostDao postD = new PostDao(ConnectionProvider.getCon());
-                                                ArrayList<Category> list = postD.getAllCategories();
-                                                for (Category c : list) {
+                        <select name="cid" id="" class="form-control">
+                            <option value="" selected disabled>---Selelct Category---</option>
+                            <%
+                                PostDao postD = new PostDao(ConnectionProvider.getCon());
+                                ArrayList<Category> list = postD.getAllCategories();
+                                for (Category c : list) {
 
-                                            %>
+                            %>
 
-                                            <option value=<%=c.getCid()%>><%=c.getName()%>
-                                            </option>
-                                            <%
-                                                }
-                                            %>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" class=" form-control" name="ptitle" placeholder="Post title">
+                            <option value=<%=c.getCid()%>><%=c.getName()%>
+                            </option>
+                            <%
+                                }
+                            %>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class=" form-control" name="ptitle" placeholder="Post title">
 
-                                    </div>
-                                    <div class="form-group">
+                    </div>
+                    <div class="form-group">
                                         <textarea class="form-control" rows="10" name="pcontent"
                                                   placeholder="Whats in your mind..."></textarea>
 
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="file" name="postpic">
-                                    </div>
-                                    <div class="container text-center">
-                                        <button type="submit" class="btn btn-outline-success">Post</button>
-
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Save changes</button>
-                            </div>
-                        </div>
                     </div>
-                </div>
+                    <div class="form-group">
+                        <input type="file" name="postpic">
+                    </div>
+                    <div class="container text-center">
+                        <button type="submit" class="btn btn-outline-success">Post</button>
 
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%--displaying the Post content here--%>
+
+<main class="container-fluid mt-3">
+    <div class="row">
+
+        <div class="col-md-3">
+
+
+            <a href="#" onclick="getPosts(0,this)" class="c-link list-group-item list-group-item-action active">
+                All Post</a>
+
+            <h4><%
+                PostDao postDao = new PostDao(ConnectionProvider.getCon());
+                ArrayList<Category> list1 = postD.getAllCategories();
+                for (Category cc : list1) {
+            %>
+                <a href="#"  onclick="getPosts(<%=cc.getCid()%>,this)"
+                   class="c-link list-group-item list-group-item-action "><%=cc.getName()%>
+                </a>
+                <%
+
+                    }
+
+                %></h4>
+        </div>
+
+
+        <div class="col-md-8">
+
+            <div class="container text-center " style="margin-top: 20%;" id="loader">
+                <i class="fa fa-refresh fa-4x  fa-spin"></i>
+                <h4 class="mt-2">loading....</h4>
 
             </div>
+            <div class="co-md-8">
+                <div class="row" id="post-container">
 
+                </div>
+
+            </div>
         </div>
+    </div>
 
     </div>
 
 </main>
 
-
-<%@include file="components/footer.jsp" %>
-<%@include file="components/bootstrap/bootstrap_JS.jsp" %>
-
-<%@include file="components/jQuery/jquery.jsp" %>
 <script>
 
     $(document).ready(function () {
@@ -305,9 +331,9 @@
                 data: form,
                 success: function (data, textStatus, jqXHR) {
                     //    Success
-                    if(data.trim()=="done"){
+                    if (data.trim() == "done") {
                         swal("Good job!", "post Saved Successfully!", "success");
-                    }else{
+                    } else {
                         swal("Error!", "Something went wrong. Try Again!", "error");
                     }
 
@@ -320,9 +346,47 @@
                 processData: false,
                 contentType: false
             });
-        })
-    })
+        });
+
+    });
 </script>
 
+<script>
+    // loading post using ajax
+
+    function getPosts(catId,temp) {
+
+        $("#loader").show();
+        $("#post-container").hide();
+        $(".c-link").removeClass('active');
+
+        $.ajax({
+            url: "load_post.jsp",
+            data: {cid: catId},
+            success: function (data, textStatus, jqXHR) {
+
+                $("#loader").hide()
+                $("#post-container").show();
+
+                $("#post-container").html(data)
+                $(temp).addClass('active');
+            }
+        })
+
+    }
+
+    $(document).ready(function (e) {
+        let allPostRef = $(".c-link")[0]
+        getPosts(0,allPostRef)
+    })
+
+
+</script>
+
+
+<%@include file="components/footer.jsp" %>
+<%@include file="components/bootstrap/bootstrap_JS.jsp" %>
+
+<%@include file="components/jQuery/jquery.jsp" %>
 </body>
 </html>
