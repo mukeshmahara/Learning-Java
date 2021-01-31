@@ -67,4 +67,15 @@
         <url-pattern>/Edit_User_Info</url-pattern>
     </servlet-mapping>
 
+<!--    Create post Servlet-->
+    <servlet>
+        <servlet-name>CreatePost</servlet-name>
+        <servlet-class>com.mukeshmahara.myblogs2.servlets.CreatePost</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>CreatePost</servlet-name>
+        <url-pattern>/CreatePost</url-pattern>
+    </servlet-mapping>
+
 </web-app>
