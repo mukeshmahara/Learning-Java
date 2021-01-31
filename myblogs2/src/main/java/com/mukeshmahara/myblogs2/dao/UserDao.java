@@ -2,7 +2,10 @@ package com.mukeshmahara.myblogs2.dao;
 
 import com.mukeshmahara.myblogs2.entities.User;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class UserDao {
     private Connection con = null;
@@ -35,7 +38,6 @@ public class UserDao {
             f = true;
 
 
-
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -57,7 +59,6 @@ public class UserDao {
         psmt.setString(2, password);
 
 
-
         ResultSet rs = psmt.executeQuery();
         if (rs.next()) {
             user = new User();
@@ -67,7 +68,7 @@ public class UserDao {
 
             user.setAddress(rs.getString("address"));
             user.setPassword(rs.getString("password"));
-
+            user.setProfile(rs.getString("profile_img"));
             user.setEmail(rs.getString("email"));
             user.setGender(rs.getString("gender"));
             user.setPhone(rs.getString("phone"));
@@ -78,23 +79,23 @@ public class UserDao {
 
     }
 
-    public boolean updateUserInfo(User user){
+    public boolean updateUserInfo(User user) {
         boolean f = false;
 
         String sql = "update user set email =?,address = ?, phone = ?,profile_img = ?  where id = ?";
         try {
             PreparedStatement pstmt = con.prepareStatement(sql);
             pstmt.setString(1, user.getEmail());
-            pstmt.setString(2,user.getAddress());
-            pstmt.setString(3,user.getPhone());
-            pstmt.setString(4,user.getProfile());
-            pstmt.setInt(5,user.getId());
+            pstmt.setString(2, user.getAddress());
+            pstmt.setString(3, user.getPhone());
+            pstmt.setString(4, user.getProfile());
+            pstmt.setInt(5, user.getId());
             pstmt.executeUpdate();
 
-            f=true;
+            f = true;
 
 
-        }catch (SQLException e){
+        } catch (SQLException e) {
             e.printStackTrace();
         }
         return f;
@@ -102,5 +103,23 @@ public class UserDao {
 
     }
 
-
+    public User getUserById(int uid) {
+        User user = new User();
+        try {
+            String sql = "select * from user where id = ?";
+            PreparedStatement pstmt = con.prepareStatement(sql);
+            pstmt.setInt(1, uid);
+            ResultSet rs = pstmt.executeQuery();
+            while (rs.next()) {
+                user.setUsername(rs.getString("username"));
+                user.setEmail(rs.getString("email"));
+                user.setAddress(rs.getString("address"));
+                user.setProfile(rs.getString("profile_img"));
+                user.setDateTime(rs.getString("created_at"));
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return user;
+    }
 }
