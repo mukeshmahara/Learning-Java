@@ -13,36 +13,36 @@
 		<item key="org.eclipse.ui.internal.quickaccess.QuickAccessDialogDIALOG_USE_PERSISTED_LOCATION" value="false"/>
 		<list key="textEntries">
 			<item value="2"/>
-			<item value="1"/>
 			<item value="2"/>
+			<item value="1"/>
 			<item value="2"/>
 			<item value="1"/>
 			<item value="1"/>
 		</list>
 		<list key="orderedElements">
+			<item value="org.eclipse.ui.console.ConsoleView"/>
 			<item value="org.eclipse.epp.mpc.ui.command.showMarketplaceWizard"/>
 			<item value="org.eclipse.pde.ui.EditorPreferencePage"/>
 			<item value="org.eclipse.ui.navigator.ProjectExplorer"/>
-			<item value="org.eclipse.ui.console.ConsoleView"/>
 			<item value="org.eclipse.jdt.ui.preferences.ProblemSeveritiesPreferencePage"/>
 			<item value="org.eclipse.egit.ui.RepositoriesView"/>
 		</list>
 		<list key="orderedProviders">
+			<item value="org.eclipse.e4.ui.parts"/>
 			<item value="org.eclipse.ui.commands"/>
 			<item value="org.eclipse.ui.preferences"/>
-			<item value="org.eclipse.e4.ui.parts"/>
 			<item value="org.eclipse.e4.ui.parts"/>
 			<item value="org.eclipse.ui.preferences"/>
 			<item value="org.eclipse.e4.ui.parts"/>
 		</list>
 		<list key="textArray">
+			<item value="con"/>
+			<item value="conso"/>
 			<item value="ecli"/>
 			<item value="market"/>
 			<item value="plugin"/>
 			<item value="proje"/>
 			<item value="project"/>
-			<item value="con"/>
-			<item value="conso"/>
 			<item value="java compiler version"/>
 			<item value="git re"/>
 		</list>

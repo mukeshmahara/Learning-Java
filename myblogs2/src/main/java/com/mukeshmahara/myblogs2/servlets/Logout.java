@@ -19,7 +19,7 @@ public class Logout extends HttpServlet {
         session.removeAttribute("current_user");
 
         Message m = new Message("Logout Successfully","Success","alert-success");
-        session.setAttribute("msg",m);
+        session.setAttribute("logout_msg",m);
 
         resp.sendRedirect("login_page.jsp");
 

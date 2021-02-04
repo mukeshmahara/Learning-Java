@@ -158,4 +158,32 @@ public class PostDao {
 
     }
 
+    public List <Post> getPostByUserId(int uid){
+        List<Post> list = new ArrayList<>();
+
+        String sql = "select * from post where uid = ?";
+
+        try {
+            PreparedStatement pstmt = con.prepareStatement(sql);
+            pstmt.setInt(1,uid);
+            ResultSet rs = pstmt.executeQuery();
+            while(rs.next()){
+                Post p = new Post();
+                p.setPtitle(rs.getString("ptitle"));
+                p.setPcontent(rs.getString("pcontent"));
+                p.setPic(rs.getString("pic"));
+//                p.setCreated_at(new Timestamp().getTime());
+
+
+
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+
+
+        return list;
+
+    }
+
 }

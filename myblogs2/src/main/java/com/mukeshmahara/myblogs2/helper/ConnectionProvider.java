@@ -12,15 +12,16 @@ public class ConnectionProvider {
             try {
 
                 Class.forName("com.mysql.cj.jdbc.Driver");
-                con = DriverManager.getConnection("jdbc:mysql://localhost:3306/myblogs","root","password");
+                con = DriverManager.getConnection("jdbc:mysql://localhost:3306/myblogs", "root", "password");
 
             } catch (Exception e) {
                 System.out.println("Unable to load Driver");
                 e.printStackTrace();
             }
         }
-        
-        
+
+
         return con;
     }
+
 }

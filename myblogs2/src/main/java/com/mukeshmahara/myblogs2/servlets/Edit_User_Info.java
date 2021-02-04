@@ -36,21 +36,27 @@ public class Edit_User_Info extends HttpServlet {
         user.setEmail(email);
         user.setPhone(phone);
         user.setAddress(address);
-
-//        String oldFile = user.getProfile();
         user.setProfile(image_name);
+        String oldFile = user.getProfile();
 
+        System.out.println(oldFile);
         UserDao dao = new UserDao(ConnectionProvider.getCon());
 
         boolean status = dao.updateUserInfo(user);
 
         if (status) {
-            String path = req.getRealPath("/") + "pics" + File.separator + user.getProfile();
-//            String pathOldFile = req.getRealPath("/")+"pics"+File.separator + oldFile;
-//
-//            if(!pathOldFile.equals("default.png")){
-//                Helper.deleteFile(pathOldFile);
-//            }
+            String path = req.getServletContext().getRealPath("/") + "pics" +File.separator+"profile_pic"+ File.separator + user.getProfile();
+            String pathOldFile = req.getServletContext().getRealPath("/")+"pics"+File.separator+"profile_pic"+File.separator + "default.png";
+
+            System.out.println(path);
+            System.out.println(pathOldFile);
+            if(!pathOldFile.equals(path)){
+                Helper.deleteFile(pathOldFile);
+
+            }
+            else {
+                user.setProfile("default.png");
+            }
 
             if (Helper.saveFile(part.getInputStream(), path)) {
                 resp.getWriter().println("Profile updated successfully");

@@ -36,7 +36,7 @@ public class Login extends HttpServlet {
             if (user == null) {
                 Message msg = new Message("invalid Credentials!!", "error", "alert-danger");
                 HttpSession session = req.getSession();
-                session.setAttribute("msg", msg);
+                session.setAttribute("Invalid_credentials_msg", msg);
                 resp.sendRedirect("login_page.jsp");
             } else {
 

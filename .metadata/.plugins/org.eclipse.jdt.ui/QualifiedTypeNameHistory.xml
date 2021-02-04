@@ -1,24 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
-    <fullyQualifiedTypeName name="lovecalculator.Lovecalculator"/>
-    <fullyQualifiedTypeName name="java.awt.GridLayout"/>
-    <fullyQualifiedTypeName name="java.awt.Dimension"/>
-    <fullyQualifiedTypeName name="java.lang.InternalError"/>
-    <fullyQualifiedTypeName name="javax.swing.WindowConstants"/>
-    <fullyQualifiedTypeName name="javax.swing.UIManager"/>
-    <fullyQualifiedTypeName name="javax.swing.UnsupportedLookAndFeelException"/>
-    <fullyQualifiedTypeName name="java.awt.GridBagConstraints"/>
-    <fullyQualifiedTypeName name="javax.swing.JPanel"/>
-    <fullyQualifiedTypeName name="javax.swing.JFrame"/>
-    <fullyQualifiedTypeName name="lovecalculator.Lyout_Test"/>
-    <fullyQualifiedTypeName name="javax.swing.JButton"/>
-    <fullyQualifiedTypeName name="java.awt.GridBagLayout"/>
-    <fullyQualifiedTypeName name="javax.swing.JLabel"/>
-    <fullyQualifiedTypeName name="java.awt.Insets"/>
-    <fullyQualifiedTypeName name="javax.swing.BoxLayout"/>
-    <fullyQualifiedTypeName name="javax.swing.Box"/>
-    <fullyQualifiedTypeName name="javax.swing.BorderFactory"/>
     <fullyQualifiedTypeName name="java.awt.BorderLayout"/>
     <fullyQualifiedTypeName name="DeliveryCompany.Login"/>
     <fullyQualifiedTypeName name="javax.swing.border.Border"/>
@@ -32,7 +13,6 @@
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="com.sun.tools.javac.util.List"/>
-    <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="java.util.Iterator"/>
     <fullyQualifiedTypeName name="sun.security.mscapi.CKeyStore.MY"/>
     <fullyQualifiedTypeName name="sun.nio.cs.ext.ISCII91"/>
@@ -41,7 +21,6 @@
     <fullyQualifiedTypeName name="java.util.Deque"/>
     <fullyQualifiedTypeName name="jdk.internal.misc.JavaAWTAccess"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
-    <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ResponseBody"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RestController"/>
     <fullyQualifiedTypeName name="org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration"/>
@@ -50,7 +29,6 @@
     <fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
     <fullyQualifiedTypeName name="java.net.http.HttpClient"/>
     <fullyQualifiedTypeName name="java.net.URI"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="java.io.IOException"/>
     <fullyQualifiedTypeName name="java.lang.InterruptedException"/>
     <fullyQualifiedTypeName name="java.net.http.HttpRequest"/>
@@ -60,4 +38,26 @@
     <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
     <fullyQualifiedTypeName name="javax.annotation.PostConstruct"/>
     <fullyQualifiedTypeName name="com.mukeshmahara.QuickStart.CoronaVirusTracker"/>
+    <fullyQualifiedTypeName name="com.sun.java_cup.internal.runtime.Scanner"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="Gautam_Rana.Rectangle"/>
+    <fullyQualifiedTypeName name="Gautam_Rana.KilometerToMile_Converter"/>
+    <fullyQualifiedTypeName name="javax.swing.Action"/>
+    <fullyQualifiedTypeName name="java.awt.event.ActionEvent"/>
+    <fullyQualifiedTypeName name="java.lang.Double"/>
+    <fullyQualifiedTypeName name="javax.swing.JDialog"/>
+    <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
+    <fullyQualifiedTypeName name="Gautam_Rana.Teller"/>
+    <fullyQualifiedTypeName name="Gautam_Rana.Car"/>
+    <fullyQualifiedTypeName name="Gautam_Rana.JavaGUIProgram"/>
+    <fullyQualifiedTypeName name="com.mysql.cj.x.protobuf.MysqlxNotice.Frame"/>
+    <fullyQualifiedTypeName name="javax.swing.JPanel"/>
+    <fullyQualifiedTypeName name="javax.swing.JLabel"/>
+    <fullyQualifiedTypeName name="javax.swing.JTextField"/>
+    <fullyQualifiedTypeName name="javax.swing.JButton"/>
+    <fullyQualifiedTypeName name="javax.swing.JFrame"/>
+    <fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
 </qualifiedTypeNameHistroy>

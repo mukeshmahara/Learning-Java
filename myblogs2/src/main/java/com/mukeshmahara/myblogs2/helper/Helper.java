@@ -24,7 +24,6 @@ public class Helper {
         try{
             byte b[]= new byte[is.available()];
             is.read(b);
-            System.out.println(is.read(b));
             FileOutputStream fos = new FileOutputStream(path);
             fos.write(b);
             fos.flush();

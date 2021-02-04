@@ -1,18 +1,26 @@
 package com.mukeshmahara.myblogs2.entities;
 
-import java.sql.Timestamp;
 
 public class User {
     private int id;
 
-    private String user_image;
+    private String username;
+    private String email;
+    private String password;
+    private String gender;
+    private String phone;
+    private String address;
+    private String dateTime;
 
-    public String getUser_image() {
-        return user_image;
+
+    private String profile;
+
+    public String getProfile() {
+        return profile;
     }
 
-    public void setUser_image(String user_image) {
-        this.user_image = user_image;
+    public void setProfile(String profile) {
+        this.profile = profile;
     }
 
     public void setId(int id) {
@@ -27,10 +35,6 @@ public class User {
         this.dateTime = dateTime;
     }
 
-    private String username;
-    private String email;
-    private String password;
-
     public int getId() {
         return id;
     }
@@ -39,13 +43,8 @@ public class User {
         return dateTime;
     }
 
-    private String gender;
-    private String phone;
-    private String address;
 
 
-
-    private String dateTime;
 
 
 //    Constructors Here
@@ -125,6 +124,7 @@ public class User {
     public String getAddress() {
         return address;
     }
+
     public void setPhone(String phone) {
         this.phone = phone;
     }

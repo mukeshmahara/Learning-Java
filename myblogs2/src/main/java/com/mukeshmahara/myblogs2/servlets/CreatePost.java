@@ -11,6 +11,7 @@ import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.http.*;
 import java.io.File;
 import java.io.IOException;
+import java.sql.Timestamp;
 
 @MultipartConfig
 public class CreatePost extends HttpServlet {
@@ -22,6 +23,7 @@ public class CreatePost extends HttpServlet {
         String ptitle = req.getParameter("ptitle");
         String pcontent = req.getParameter("pcontent");
         Part part = req.getPart("postpic");
+
 
 //        Getting current id
         HttpSession session = req.getSession();
