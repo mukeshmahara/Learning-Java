@@ -1,4 +1,4 @@
-package org.mukeshmahara;
+package org.mukeshmahara.entities;
 
 public class Student {
     private int studentId;
