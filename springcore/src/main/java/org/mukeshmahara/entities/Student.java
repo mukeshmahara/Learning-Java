@@ -5,14 +5,7 @@ public class Student {
     private String studentName;
     private  String studentAddress;
 
-    @Override
-    public String toString() {
-        return "Student{" +
-                "studentId=" + studentId +
-                ", studentName='" + studentName + '\'' +
-                ", studentAddress='" + studentAddress + '\'' +
-                '}';
-    }
+
 
     //    default constructor
     public Student() {
@@ -48,5 +41,16 @@ public class Student {
 
     public void setStudentAddress(String studentAddress) {
         this.studentAddress = studentAddress;
+    }
+
+
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "studentId=" + studentId +
+                ", studentName='" + studentName + '\'' +
+                ", studentAddress='" + studentAddress + '\'' +
+                '}';
     }
 }
