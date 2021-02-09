@@ -14,7 +14,7 @@ public class Smallest_Multiple {
 			do {
 				num++;
 				int test = num%i;
-			} while (vc );
+			} while (true );
 
 		}
 
