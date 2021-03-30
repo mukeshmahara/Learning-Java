@@ -1,11 +1,124 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css"
+          integrity="sha512-P5MgMn1jBN01asBgU0z60Qk4QxiXo86+wlFahKrsQf37c9cro517WzVSPPV1tDKzhku2iJ2FVgL67wG03SGnNA=="
+          crossorigin="anonymous"/>
+    <!--    <link th:rel="stylesheet" th:href="@{/webjars/bootstrap-4.0.0-1/css/bootstrap.min.css} "/>-->
 </head>
+<style>
+    body {
+        background-color: darkslategray;
+    }
+</style>
 <body>
-<h1>Expense Details</h1>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#"><img src="img/ET_logo.jpeg" height="75px" width="75px" alt="logo"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Pricing</a>
+            </li>
+        </ul>
+        <span class="navbar-text">
+      Login to Save your money
+            <button class="mr-2 btn btn-outline-primary"> Login</button>
+    </span>
+    </div>
+</nav>
+<div class="container">
+    <div class="row ml-2">
+        <div class="col-md-4 shadow-lg p-3 mt-2 text-center bg-light rounded">
+            <h3>your current expenses</h3>
+
+
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <td><strong>Title</strong></td>
+                    <td><strong>Cost</strong></td>
+                </tr>
+                </thead>
+                <tr th:each="expense: ${listExpense}">
+                    <td th:text="${expense.getExpenseType()}"/>
+                    <td th:text="${expense.getMoneySpent()}"/>
+                </tr>
+            </table>
+
+
+            <input type="button" id="add" data-toggle="modal" data-target="#exampleModal" class="float-right col-md-12 btn-primary text-light  btn-outline-success rounded" value="Add"
+                   name="addExpense"/>
+
+        </div>
+
+        <div class="col-md-7 shadow-sm p-3 ml-4 mt-2 text-center bg-light rounded">
+            <h3>Visualize your expense</h3>
+            <hr>
+        </div>
+
+    </div>
+
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col col-md-12 text-center shadow-sm bg-light rounded">
+                <h4>Forecaste you next month Expense</h4>
+                <hr>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="output"></div>
+<!--</p>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.slim.min.js"
+        integrity="sha512-6ORWJX/LrnSjBzwefdNUyLCMTIsGoNP6NftMy2UAm1JBm6PRZCO1d7OHBStWpVFZLO+RerTvqX/Z9mBFfCJZ4A=="
+        crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"
+        integrity="sha512-XKa9Hemdy1Ui3KSGgJdgMyYlUg1gM+QhL6cnlyTe2qzMCYm4nAZ1PsVerQzTTXzonUR+dmswHqgJPuwCq1MaAg=="
+        crossorigin="anonymous"></script>
 
 </body>
+
 </html>
