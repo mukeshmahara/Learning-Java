@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css"
           integrity="sha512-P5MgMn1jBN01asBgU0z60Qk4QxiXo86+wlFahKrsQf37c9cro517WzVSPPV1tDKzhku2iJ2FVgL67wG03SGnNA=="
           crossorigin="anonymous"/>
-    <!--    <link th:rel="stylesheet" th:href="@{/webjars/bootstrap-4.0.0-1/css/bootstrap.min.css} "/>-->
+
+
 </head>
 <style>
     body {
@@ -36,37 +37,68 @@
         </ul>
         <span class="navbar-text">
       Login to Save your money
-            <button class="mr-2 btn btn-outline-primary"> Login</button>
+            <button class="mr-2 btn btn-outline-primary" id="loginBtn"> Login</button>
     </span>
     </div>
 </nav>
 <div class="container">
-    <div class="row ml-2">
-        <div class="col-md-4 shadow-lg p-3 mt-2 text-center bg-light rounded">
+    <div class="row ml-2  " height="100%">
+        <div class="col-md-4 shadow-lg p-3 mt-2  text-center bg-light rounded  bg-dark text-light "
+             style="
+             height: 350px;"
+             >
             <h3>your current expenses</h3>
 
+            <div class="overflow-auto"
+                 style="
+                 height:224px;
+                 "
+            >
 
-            <table class="table table-hover">
-                <thead>
-                <tr>
-                    <td><strong>Title</strong></td>
-                    <td><strong>Cost</strong></td>
-                </tr>
-                </thead>
-                <tr th:each="expense: ${listExpense}">
-                    <td th:text="${expense.getExpenseType()}"/>
-                    <td th:text="${expense.getMoneySpent()}"/>
-                </tr>
-            </table>
+                <table class="table table-hover bg-light ">
+                    <thead>
+                    <tr>
+                        <td><strong>Date</strong></td>
+                        <td><strong>Title</strong></td>
+                        <td><strong>Cost</strong></td>
+                    </tr>
+                    </thead>
+                    <div class="">
+
+                        <tr th:each="expense: ${listExpense}">
+                            <td th:text="${expense.getExpenseDate()}">
+                            <td th:text="${expense.getExpenseType()}"/>
+                            <td th:text="${expense.getMoneySpent()}"/>
+                        </tr>
+                    </div>
+                </table>
+
+            </div>
 
 
-            <input type="button" id="add" data-toggle="modal" data-target="#exampleModal" class="float-right col-md-12 btn-primary text-light  btn-outline-success rounded" value="Add"
+            <input type="button" id="add" data-toggle="modal" data-target="#exampleModal"
+                   class="float-right col-md-12 btn-primary text-light  btn-outline-success rounded" value="Add"
                    name="addExpense"/>
 
         </div>
 
         <div class="col-md-7 shadow-sm p-3 ml-4 mt-2 text-center bg-light rounded">
             <h3>Visualize your expense</h3>
+            <script src="https://code.highcharts.com/highcharts.js"></script>
+            <script src="https://code.highcharts.com/modules/data.js"></script>
+            <script src="https://code.highcharts.com/modules/exporting.js"></script>
+            <script src="https://code.highcharts.com/modules/export-data.js"></script>
+            <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+            <figure class="highcharts-figure">
+                <div id="container"></div>
+                <p class="highcharts-description">
+                    Highcharts has extensive support for time series, and will adapt
+                    intelligently to the input data. Click and drag in the chart to zoom in
+                    and inspect the data.
+                </p>
+            </figure>
+
             <hr>
         </div>
 
@@ -76,7 +108,10 @@
     <div class="container mt-4">
         <div class="row">
             <div class="col col-md-12 text-center shadow-sm bg-light rounded">
-                <h4>Forecaste you next month Expense</h4>
+                <h4>Forecast your next month Expense</h4>
+
+
+
                 <hr>
 
             </div>
@@ -90,18 +125,25 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Add your Expense</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body">
-                ...
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
+            <form action="#" th:action="@{/}" method="post">
+
+
+                <div class="modal-body">
+                    <input type="text" name="title" id="title" placeholder="name of the expense "
+                           class="form-control p-3 mb-4">
+                    <input type="text" name="cost" id="cost" placeholder="amount" class="form-control p-3">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <input type="submit" id="saveBtn" class="btn btn-primary" value="Save">
+                </div>
+
+            </form>
         </div>
     </div>
 </div>
@@ -118,7 +160,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"
         integrity="sha512-XKa9Hemdy1Ui3KSGgJdgMyYlUg1gM+QhL6cnlyTe2qzMCYm4nAZ1PsVerQzTTXzonUR+dmswHqgJPuwCq1MaAg=="
         crossorigin="anonymous"></script>
-
+<script src="js/custom.js"></script>
 </body>
 
 </html>
